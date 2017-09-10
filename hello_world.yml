@@ -6,4 +6,8 @@
       msg: "Hello World!"
   - name: Install htop
     apt:
-      pkg: htop
+      pkg: "{{ item }}"
+    with_items:
+    - htop
+    - curl
+    - vim
